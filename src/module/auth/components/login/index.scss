@@ -1,0 +1,221 @@
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('/src/assets/images/login4.png') no-repeat center;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  33% {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('/src/assets/images/login3.png') no-repeat center;
+    background-size: 110% 110%;
+    background-position: top;
+  }
+  66% {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/src/assets/images/login2.png') no-repeat center;
+    background-size: 120% 120%;
+    background-position: bottom;
+  }
+  100% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('/src/assets/images/login1.png') no-repeat center;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+
+body {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Background animation for SignInSignUp page */
+body.signin-signup {
+  animation: backgroundAnimation 60s infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 10px;
+}
+
+
+//sing in
+
+.auth-wrapper {
+  
+  padding-bottom: 20px;
+  padding-top: 30px; /* Header space */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  min-height: 100vh;
+}
+
+.auth-card {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.auth-image {
+  flex: 1;
+  background-image: url('/src/assets/images/LoginRegister.jpg');
+  background-size: cover; /* Ensure image covers area */
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 15px;
+  height: 100%; /* Let it take full height of parent */
+}
+
+
+.auth-image h2 {
+  margin-bottom: 20px;
+}
+
+.auth-form-container {
+  flex: 1;
+  padding: 15px;
+}
+
+.auth-form-container h2 {
+  margin-bottom: 20px;
+}
+
+.auth-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.auth-toggle button {
+  flex: 1;
+  padding: 10px;
+  margin-right: 5px;
+  align-items: center;
+  border: none;
+  background-color: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-toggle button.active {
+  background-color: #014577;
+  color: white;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="checkbox"],
+.auth-form input[type="radio"],
+.auth-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.auth-form input[type="radio"],
+.auth-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.label-text {
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+.terms-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #014577;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background-color: #012d4a;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #db4437;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.google-btn:hover {
+  background-color: #c23321;
+}
+
+
+.radio-button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between buttons */
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* Wrap on small screens */
+}
+
+.radio-label {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s;
+}
+
+.radio-label:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.radio-label input[type="radio"] {
+  accent-color: #fff; /* White styled radio buttons */
+  cursor: pointer;
+}
+/* Close button styles */
+.close-btn {
+  position: absolute;
+  top: 60px;
+  right: 380px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #f50000;
+  cursor: pointer;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+.close-btn:hover {
+  color: red;
+}
